@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form class="d-flex flex-column align-items-start justify-content-start p-4">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="What's on your mind?"
+          id="title"
+        />
+      </div>
+      <br />
+      <div class="input-group">
+        <textarea id="text" class="form-control" placeholder="მოჯვი ტექსტი"></textarea>
+      </div>
+      <br />
+      <button type='button' class="btn btn-success" onclick="addFormValues()">Add</button>
+    </form>
+
+    <div id="container" class="d-flex flex-wrap p-4 bg-light">
+      
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
