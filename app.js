@@ -14,6 +14,20 @@ const container = document.getElementById("container");
 const titleInput = document.getElementById("title");
 const textInput = document.getElementById("text");
 
+
+ const deleteItem = (title,text) =>{
+    const index = blogs.findIndex(item=>item.title===title&&item.text===text)
+    if(index !== -1){
+        blogs.splice(index,1)
+        addItemToLocacStorage();
+        container.innerHTML="";
+        renderItems();
+    }
+    
+}
+
+
+
 const getCard = (title, text) => {
     const dom = 
         `
@@ -23,7 +37,7 @@ const getCard = (title, text) => {
             <p class="card-text">
                 ${text}
             </p>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-danger" onclick="deleteItem('${title}','${text}')">Delete</button>
             </div>
         </div>
       `
@@ -32,6 +46,8 @@ const getCard = (title, text) => {
 
     return div;
 };
+
+
 
 const addItem = (title, text) => {
     const card = getCard(title, text);
